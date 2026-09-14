@@ -181,15 +181,3 @@ The code was developed in MATLAB.
 and may therefore require the Parallel Computing Toolbox and a supported GPU for full simulation generation.
 
 The saved manuscript data can be analyzed with `spectrum_from_Leaves.m` without rerunning the full bRIFS simulation.
-
-## Important implementation note
-
-Do not deduplicate the entries in `Leaves`.
-
-Multiple descendant lineages may inherit the same contraction scale within a recursive replacement event. These are still distinct recursive lineages and must be counted separately in
-
-$$
-N_n(\alpha,\Delta\alpha).
-$$
-
-Removing duplicate scale trajectories changes lineage multiplicities and biases the finite-depth multifractal estimate.
