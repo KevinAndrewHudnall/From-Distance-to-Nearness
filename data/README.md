@@ -36,18 +36,6 @@ This is required because the finite-depth multifractal calculation counts recurs
 
 ---
 
-### `Scale_Matrix_25_Iter.mat`
-
-Contains the scale matrix `S` reconstructed from the same 25-iteration realization.
-
-Each column of `S` represents a complete recursive lineage path through the realized system, while rows correspond to recursive depth.
-
-The matrix records the accumulated scale along each complete lineage history.
-
-`S` is retained because it provides an explicit ancestry-resolved representation of the realization and is useful for compatibility with earlier analyses of the bRIFS.
-
-The final multifractal-spectrum calculation in the manuscript, however, is performed directly from `Leaves` rather than from `S`.
-
 ## Reproducing the manuscript figures
 
 From the repository root, add the code directory to the MATLAB path and load the saved lineage data:
@@ -85,18 +73,13 @@ This produces two figures.
 For each recursive lineage $v$ at depth $n$,
 
 $$
-\alpha_n(v)
-=
--\frac{\log B_v}{n}.
+\alpha_n(v) = -\frac{\log B_v}{n}.
 $$
 
 If $N_n(\alpha,\Delta\alpha)$ is the number of depth-$n$ lineages in a bin centered at $\alpha$, the finite-depth spectrum is estimated by
 
 $$
-\widehat f_n(\alpha)
-=
-\frac{\log N_n(\alpha,\Delta\alpha)}
-{n\alpha}.
+\widehat f_n(\alpha) = \frac{\log N_n(\alpha,\Delta\alpha)}{n\alpha}.
 $$
 
 For the uniform-contraction case used in the simulation,
@@ -108,9 +91,7 @@ $$
 the analytic spectrum is
 
 $$
-f(\alpha)
-=
-\frac{\log(m\alpha)+1-\alpha}{\alpha},
+f(\alpha)=\frac{\log(m\alpha)+1-\alpha}{\alpha},
 $$
 
 with
@@ -172,8 +153,6 @@ Within a recursive replacement event, multiple terminal descendants can inherit 
 For example, if a replacement event produces three terminal descendants at scale $B$, then all three occurrences of $B$ must remain in the next level of `Leaves`.
 
 Deduplicating these values changes the lineage count
-
-$$
 N_n(\alpha,\Delta\alpha)
 $$
 
