@@ -40,9 +40,7 @@ The numerical analysis follows the scale of every recursive lineage through this
 If $B_v$ is the accumulated scale of a lineage $v$ at recursive depth $n$, its finite-depth contraction exponent is
 
 $$
-\alpha_n(v)
-=
--\frac{\log B_v}{n}.
+\alpha_n(v) =-\frac{\log B_v}{n}.
 $$
 
 Let
@@ -54,10 +52,7 @@ $$
 denote the number of depth-$n$ lineages whose contraction exponents lie in a bin of width $\Delta\alpha$ centered at $\alpha$. The finite-depth multifractal spectrum is estimated directly by
 
 $$
-\widehat f_n(\alpha)
-=
-\frac{\log N_n(\alpha,\Delta\alpha)}
-{n\alpha}.
+\widehat f_n(\alpha)=\frac{\log N_n(\alpha,\Delta\alpha)}{n\alpha}.
 $$
 
 For the minimal bRIFS used in the numerical example, the contraction factors satisfy
@@ -75,9 +70,7 @@ $$
 where $K$ is the number of terminal descendants produced by one recursive replacement, the analytic spectrum is
 
 $$
-f(\alpha)
-=
-\frac{\log(m\alpha)+1-\alpha}{\alpha}.
+f(\alpha)=\frac{\log(m\alpha)+1-\alpha}{\alpha}.
 $$
 
 For the branching parameters used here,
@@ -239,22 +232,6 @@ This multiplicity must be retained because the multifractal estimator counts lin
 
 See [`data/README.md`](data/README.md) for additional details.
 
-## Important implementation note
-
-Do not deduplicate the values stored in `Leaves`.
-
-Multiple descendant lineages can inherit an identical scale during the same recursive replacement event while remaining distinct members of the recursive genealogy.
-
-For example, if one replacement event produces three terminal descendants at scale $B$, all three occurrences of $B$ must be retained.
-
-Removing duplicates changes
-
-$$
-N_n(\alpha,\Delta\alpha)
-$$
-
-and therefore changes the estimated multifractal spectrum.
-
 ## MATLAB requirements
 
 The code was developed in MATLAB.
@@ -269,6 +246,10 @@ The full simulation may therefore require the MATLAB Parallel Computing Toolbox 
 The supplied `Leaves_25_Iter.mat` file allows the manuscript multifractal analysis to be reproduced without regenerating the full branching realization.
 
 ## Reference
+
+Hudnall, K.  
+**From Distance to Nearness: Rethinking Geometry on the Tree of Life.**  
+Manuscript in preparation / under review.
 
 Hudnall, K. and D'Souza, R. (2025).  
 **What does the tree of life look like as it grows? Evolution and the multifractality of time.**  
