@@ -6,8 +6,11 @@ This repository contains the data and minimal code needed to reproduce the numer
 Kevin Hudnall
 
 ## Contents
+- `BuildMultifractalTreeFn.*` — implements the branching-process Random Iterated Function System (bRIFS) of Hudnall & D'Souza 2025 to generate a multifractal phylogenetic tree.
+- `MakeRandomTree.*` — builds a single finite Galton-Watson tree. Called by BuildMultifractalTreeFn to implement the bRIFS.
 - `data/Scale_Matrix_25_Iter.*` — the scale matrix `S` used in the manuscript’s numerical illustration.
 - `code/spectrum_from_S.*` — computes the multifractal spectrum `f(α)` from `S` (partition sums → τ(q) → Legendre transform).
+- `spectrum_from_Leaves.*`
 
 ## Generating the system (tree + scale matrix)
 To generate new realizations of the branching-process RIFS and construct a scale matrix `S`, use the code in the companion repository:
