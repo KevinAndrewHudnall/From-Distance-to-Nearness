@@ -76,18 +76,13 @@ Performs the numerical multifractal analysis used in the manuscript.
 For every recursive lineage $v$ at depth $n$, the function computes
 
 $$
-\alpha_n(v)
-=
--\frac{\log B_v}{n}.
+\alpha_n(v) = -\frac{\log B_v}{n}.
 $$
 
 If $N_n(\alpha,\Delta\alpha)$ is the number of depth-$n$ lineages in a bin centered at $\alpha$, the finite-depth spectrum is estimated directly by
 
 $$
-\widehat f_n(\alpha)
-=
-\frac{\log N_n(\alpha,\Delta\alpha)}
-{n\alpha}.
+\widehat f_n(\alpha) = \frac{\log N_n(\alpha,\Delta\alpha)}{n\alpha}.
 $$
 
 For the minimal bRIFS with
@@ -99,9 +94,7 @@ $$
 the analytic prediction is
 
 $$
-f(\alpha)
-=
-\frac{\log(m\alpha)+1-\alpha}{\alpha}.
+f(\alpha) = \frac{\log(m\alpha)+1-\alpha}{\alpha}.
 $$
 
 Example:
@@ -127,16 +120,6 @@ This produces:
 The same stochastic realization is used at every displayed depth.
 
 ---
-
-### `spectrum_from_S.m`
-
-Legacy scale-matrix implementation retained for reference.
-
-This function analyzes the reconstructed scale matrix `S` using the earlier partition-sum and Legendre-transform workflow.
-
-It is **not** the method used for the final numerical multifractal-spectrum figure in the manuscript.
-
-The manuscript analysis should be reproduced with `spectrum_from_Leaves.m`.
 
 ## Reproducing the manuscript analysis from a new realization
 
