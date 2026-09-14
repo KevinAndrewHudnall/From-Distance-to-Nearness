@@ -50,7 +50,7 @@ Generates one finite Galton–Watson branching realization.
 K = MakeRandomTree(MaxOffspring, MaxGens);
 ```
 
-The returned value is the number of terminal leaves in the finite tree. In the notation of the manuscript, this is the recursive offspring count \(K\).
+The returned value is the number of terminal leaves in the finite tree. In the notation of the manuscript, this is the recursive offspring count $K$.
 
 For the manuscript settings:
 
@@ -61,9 +61,9 @@ MaxGens = 2;
 
 the expected recursive offspring count is approximately
 
-\[
+$$
 m=\mathbb{E}[K]\approx 1.657.
-\]
+$$
 
 `BuildMultifractalTreeFn.m` calls `MakeRandomTree.m` once for each recursive lineage replacement.
 
@@ -73,36 +73,36 @@ m=\mathbb{E}[K]\approx 1.657.
 
 Performs the numerical multifractal analysis used in the manuscript.
 
-For every recursive lineage \(v\) at depth \(n\), the function computes
+For every recursive lineage $v$ at depth $n$, the function computes
 
-\[
+$$
 \alpha_n(v)
 =
 -\frac{\log B_v}{n}.
-\]
+$$
 
-If \(N_n(\alpha,\Delta\alpha)\) is the number of depth-\(n\) lineages in a bin centered at \(\alpha\), the finite-depth spectrum is estimated directly by
+If $N_n(\alpha,\Delta\alpha)$ is the number of depth-$n$ lineages in a bin centered at $\alpha$, the finite-depth spectrum is estimated directly by
 
-\[
+$$
 \widehat f_n(\alpha)
 =
 \frac{\log N_n(\alpha,\Delta\alpha)}
 {n\alpha}.
-\]
+$$
 
 For the minimal bRIFS with
 
-\[
+$$
 r\sim\mathrm{Uniform}(0,1),
-\]
+$$
 
 the analytic prediction is
 
-\[
+$$
 f(\alpha)
 =
 \frac{\log(m\alpha)+1-\alpha}{\alpha}.
-\]
+$$
 
 Example:
 
@@ -188,8 +188,8 @@ Do not deduplicate the entries in `Leaves`.
 
 Multiple descendant lineages may inherit the same contraction scale within a recursive replacement event. These are still distinct recursive lineages and must be counted separately in
 
-\[
+$$
 N_n(\alpha,\Delta\alpha).
-\]
+$$
 
 Removing duplicate scale trajectories changes lineage multiplicities and biases the finite-depth multifractal estimate.
