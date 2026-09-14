@@ -144,16 +144,4 @@ The contraction factors were generated using MATLAB's `rand`.
 
 Because the model is stochastic, a newly generated realization will differ numerically from the data stored here. The saved files should therefore be used for exact reproduction of the manuscript figures.
 
-## Important note on lineage multiplicity
-
-Do not remove duplicate numerical values from `Leaves`.
-
-Within a recursive replacement event, multiple terminal descendants can inherit the same newly realized scale. These descendants are nevertheless distinct recursive lineages.
-
-For example, if a replacement event produces three terminal descendants at scale $B$, then all three occurrences of $B$ must remain in the next level of `Leaves`.
-
-Deduplicating these values changes the lineage count
-N_n(\alpha,\Delta\alpha)
-$$
-
 and therefore changes the estimated multifractal spectrum.
