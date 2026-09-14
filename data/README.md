@@ -112,22 +112,6 @@ with the analytic spectrum.
 
 All three estimates are obtained from the same saved stochastic realization.
 
-## Loading the scale matrix
-
-The corresponding scale matrix can be loaded separately with
-
-```matlab
-load('data/Scale_Matrix_25_Iter.mat');
-```
-
-which loads the variable
-
-```matlab
-S
-```
-
-for the same bRIFS realization.
-
 ## Simulation parameters
 
 The saved realization was generated using:
