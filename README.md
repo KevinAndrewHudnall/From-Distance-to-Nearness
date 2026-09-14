@@ -1,12 +1,12 @@
-# Multifractality in the Tree of Life — Reproducibility Package
+# From Distance to Nearness — Reproducibility Package
 
 This repository contains the data and minimal code needed to reproduce the numerical multifractal-spectrum calculation used in the manuscript:
 
-**“Multifractality in the Tree of Life: A Branching-Process RIFS Proof”**  
+**“From Distance to Nearness: Rethinking Geometry on the Tree of Life”**  
 Kevin Hudnall
 
 ## Contents
-- `data/Scale_Matrix_20_Iter.*` — the scale matrix `S` used in the manuscript’s numerical illustration.
+- `data/Scale_Matrix_25_Iter.*` — the scale matrix `S` used in the manuscript’s numerical illustration.
 - `code/spectrum_from_S.*` — computes the multifractal spectrum `f(α)` from `S` (partition sums → τ(q) → Legendre transform).
 
 ## Generating the system (tree + scale matrix)
