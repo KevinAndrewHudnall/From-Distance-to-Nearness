@@ -124,7 +124,7 @@ The function produces two figures.
 `Figure_S1_Convergence.pdf` compares the empirical spectrum at recursive depths
 
 $$
-n=10,\quad20,15,\quad20,\quad25
+n=10,\quad15,\quad20,\quad25
 $$
 
 with the analytic spectrum.
